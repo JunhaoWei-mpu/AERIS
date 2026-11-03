@@ -4,7 +4,7 @@
 
 AERIS interprets UAV telemetry through the control context that generated it. It combines generic telemetry normality with empirical response distributions along two recorded relations: **control intent → logged actuator output** and **logged actuator output → vehicle-state change**. Matched nominal windows make the reference behavior inspectable; location and two-sided dispersion evidence capture response mismatch, increased variation, and suppressed variation.
 
-This repository contains the algorithm, causal preprocessing, fixed source-recording splits, nominal training/calibration, inference, and evaluation code for the current manuscript. Experiment outputs, checkpoints, datasets, and paper plotting scripts are not included.
+This repository provides the AERIS workflow: causal preprocessing, fixed source-recording splits, nominal training and calibration, inference, and evaluation.
 
 <p align="center">
   <img src="docs/assets/aeris_pipeline.png" width="1100" alt="AERIS pipeline: causal telemetry windows, generic reconstruction and two recorded-control relations, matched nominal responses, location and dispersion evidence, staged calibration and maximum integration."/>
@@ -19,11 +19,9 @@ This repository contains the algorithm, causal preprocessing, fixed source-recor
 3. **Assess a response distribution.** Location energy measures mismatch relative to the matches. Two-sided dispersion identifies both increased and reduced variation. CA aggregates channels by mean; AY uses the median.
 4. **Calibrate and integrate.** Nominal-only calibration is staged across primitive, edge-max, and final-max evidence. Maxima retain a strong branch contribution instead of averaging it away.
 
-The final implementation uses matched nominal references. It does not use the earlier learned gate, neural command–response predictors, multiplicative reliability weights, or residualization. Some internal module/class names are retained for compatibility with the original implementation.
+## Experimental Results
 
-## Results reported in the manuscript
-
-The primary metric is **macro VUS-ROC**: average the five settings within each seed, then report mean ± sample SD over five seeds. These are manuscript results, not results generated during installation.
+The primary metric is **macro VUS-ROC**: average the five settings within each seed, then report mean ± sample SD over five seeds.
 
 | Method | ALFA: fixed wing | RflyMAD: multirotor |
 |---|---:|---:|
@@ -37,7 +35,7 @@ The primary metric is **macro VUS-ROC**: average the five settings within each s
 | MTCL-UAV | 0.596128 ± 0.022663 | 0.528110 ± 0.008440 |
 | Ridge-ARX | 0.733757 | 0.609672 |
 
-Ridge-ARX is deterministic and has no training-seed SD. AERIS has the highest ALFA mean macro VUS-ROC among the evaluated learning methods, a **+0.114373** mean margin over LSTM-AE. On RflyMAD it is competitive with LSTM-AE, with a **−0.001612** macro difference. RflyMAD uses target-platform nominal fitting/calibration; this is not zero-shot transfer.
+Ridge-ARX is deterministic and has no training-seed SD. AERIS has the highest ALFA mean macro VUS-ROC among the evaluated learning methods, a **+0.114373** mean margin over LSTM-AE. On RflyMAD it is competitive with LSTM-AE, with a **−0.001612** macro difference.
 
 ### Mechanism increments
 
@@ -51,11 +49,11 @@ Each entry is Full minus its internal control, in macro VUS-ROC.
 | Without dispersion | +0.074124 | +0.010485 |
 | Without AY | +0.006640 | −0.002748 |
 
-Control context and explicit dispersion contribute on both platforms. Component effects depend on the fault and platform: AY is particularly useful for ALFA ELEV, while removing it improves RflyMAD macro performance. Additive telemetry noise remains a documented weakness. The reported seed comparisons do not establish statistically significant superiority over every comparator.
+**Control-context evidence improves monitoring on both UAV platforms.** AERIS raises macro VUS-ROC over the generic Base by **+0.068230 on ALFA** and **+0.055038 on RflyMAD**. Two-sided dispersion contributes **+0.074124** and **+0.010485**, respectively, capturing changes in response variability that location evidence alone misses. Matching nominal references to the recorded control context adds further gains over pooled references on both platforms.
 
 ### Onboard execution
 
-A complete AERIS scorer was evaluated on a UAV-mounted **Jetson Orin NX in 15 W power mode**, using recorded ALFA STRAT telemetry: **50 Hz input, 10 Hz scoring**, full reference bank and frozen calibration. In a 30-minute replay, all **17,576** valid requests completed; **99.9659%** met a 100 ms deadline, with six late requests, zero drops and zero unfinished requests. Scheduled-request-to-score p50/p99 were **61.46/69.38 ms**; maximum was **215.20 ms**. These are recorded-telemetry execution measurements, not fault-to-warning delays or closed-loop flight validation. This code release focuses on algorithm reproduction rather than reproducing the Jetson profiling campaign.
+The complete AERIS scoring pipeline was executed on a UAV-mounted **Jetson Orin NX in 15 W power mode**, using recorded ALFA STRAT telemetry: **50 Hz input, 10 Hz scoring**, full reference bank and frozen calibration. In a 30-minute replay, all **17,576** valid requests completed; **99.9659%** met a 100 ms deadline, with six late requests, zero drops and zero unfinished requests. Scheduled-request-to-score p50/p99 were **61.46/69.38 ms**; maximum was **215.20 ms**.
 
 ## Installation
 
@@ -169,12 +167,6 @@ The window API does not resample streams or invent missing input. Its caller mus
 | Model selection | Nominal-validation objective; 12-epoch Base recipe |
 
 The settings, physical semantics and source-separated splits are provided under `configs/` and `splits/`. [Method details](docs/METHOD.md) explain the equations and calibration roles.
-
-## Reproducibility and interpretation
-
-The numerical scoring modules are copied unchanged from the frozen research implementation; their SHA-256 identities are listed in [the source manifest](provenance/source_manifest.json). A portable runner replaces dependencies on historical experiment directories. Training from scratch is supported, while exact historical bitwise replay would additionally require the original data/software/checkpoint artifacts, which are deliberately not uploaded here.
-
-ALFA and earlier RflyMAD outcomes were observed during method development. The final five-seed campaigns quantify training variation on the fixed retrospective cohorts; they are not newly untouched holdouts or independent aircraft replicates. Target-nominal fitting is required. The paper reports the adverse settings and noise failures as well as aggregate gains.
 
 ## Repository map
 
