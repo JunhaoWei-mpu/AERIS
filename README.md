@@ -92,7 +92,7 @@ ALFA preprocessing also creates `data/alfa_before_onset_guard` to preserve the r
 
 ## Reproduce one setting
 
-The three stages are deliberately separate. Training and reference fitting open only training/nominal-validation files; evaluation opens test files after the model and calibration are frozen.
+Reproduce AERIS in three steps: train the Base model on nominal telemetry, build and calibrate the matched nominal references, then evaluate fault-monitoring performance on the fixed test split.
 
 ```bash
 # 1. Train the reconstruction Base; checkpoint selection uses nominal validation.
@@ -194,4 +194,4 @@ The companion manuscript is **AERIS: Control-Context-Aware Fault Monitoring from
 }
 ```
 
-Project code uses the existing [MIT license](LICENSE). Dataset rights remain with their providers. See [acknowledgments and third-party references](docs/ACKNOWLEDGMENTS.md).
+Released under the [MIT License](LICENSE). See [acknowledgments and third-party references](docs/ACKNOWLEDGMENTS.md).
