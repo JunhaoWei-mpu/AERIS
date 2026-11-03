@@ -5,11 +5,11 @@ __pycache__/
 .venv/
 build/
 dist/
-data/
-runs/
-results/
-artifacts/
-checkpoints/
+/data/
+/runs/
+/results/
+/artifacts/
+/checkpoints/
 *.pth
 *.pt
 *.npz
