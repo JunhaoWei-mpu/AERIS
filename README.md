@@ -122,8 +122,6 @@ python -m aeris reproduce --dataset rflymad --data-root data/rflymad \
   --seeds 0 1 2 3 4 --device cuda:0 --out runs
 ```
 
-`--setting strat` restricts a campaign to one setting. Each invocation uses a new output directory and never chooses a best seed. The evaluation also produces history-only, pooled-reference, no-dispersion and no-AY controls. This release implements AERIS and its internal controls; the external methods in the manuscript table are not silently replaced by approximate implementations here.
-
 ## Score your own complete windows
 
 After fitting a monitor, save an NPZ with:
