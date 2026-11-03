@@ -1,0 +1,172 @@
+{
+  "cohort_exclusions_preserved": [
+    "carbonZ_2018-10-05-14-37-22_1_no_failure",
+    "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+    "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure"
+  ],
+  "dataset": "alfa",
+  "flight_to_group": {
+    "carbonZ_2018-07-18-15-53-31_1_engine_failure": "telemetry/2018-07-18/flight7/flight.tlog",
+    "carbonZ_2018-07-18-15-53-31_2_engine_failure": "telemetry/2018-07-18/flight7/flight.tlog",
+    "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj": "telemetry/2018-07-18/flight8/flight.tlog",
+    "carbonZ_2018-07-18-16-37-39_1_no_failure": "telemetry/2018-07-18/flight8/flight.tlog",
+    "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj": "telemetry/2018-07-18/flight8/flight.tlog",
+    "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj": "telemetry/2018-07-30/flight2/flight.tlog",
+    "carbonZ_2018-07-30-16-39-00_1_engine_failure": "telemetry/2018-07-30/flight1/flight.tlog",
+    "carbonZ_2018-07-30-16-39-00_2_engine_failure": "telemetry/2018-07-30/flight1/flight.tlog",
+    "carbonZ_2018-07-30-16-39-00_3_no_failure": "telemetry/2018-07-30/flight1/flight.tlog",
+    "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj": "telemetry/2018-07-30/flight4/flight.tlog",
+    "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj": "telemetry/2018-07-30/flight4/flight.tlog",
+    "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj": "telemetry/2018-07-30/flight5/flight.tlog",
+    "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj": "telemetry/2018-07-30/flight7/flight.tlog",
+    "carbonZ_2018-09-11-11-56-30_engine_failure": "telemetry/2018-09-11/flight3/flight.tlog",
+    "carbonZ_2018-09-11-14-16-55_no_failure": "telemetry/2018-09-11/flight4/flight.tlog",
+    "carbonZ_2018-09-11-14-22-07_1_engine_failure": "telemetry/2018-09-11/flight4/flight.tlog",
+    "carbonZ_2018-09-11-14-22-07_2_engine_failure": "telemetry/2018-09-11/flight4/flight.tlog",
+    "carbonZ_2018-09-11-14-41-38_no_failure": "telemetry/2018-09-11/flight5/flight.tlog",
+    "carbonZ_2018-09-11-14-41-51_elevator_failure": "telemetry/2018-09-11/flight7/flight.tlog",
+    "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure": "telemetry/2018-09-11/flight5/flight.tlog",
+    "carbonZ_2018-09-11-15-05-11_1_elevator_failure": "telemetry/2018-09-11/flight8/flight.tlog",
+    "carbonZ_2018-09-11-15-05-11_2_no_failure": "telemetry/2018-09-11/flight8/flight.tlog",
+    "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure": "telemetry/2018-09-11/flight6/flight.tlog",
+    "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure": "telemetry/2018-09-11/flight6/flight.tlog",
+    "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure": "telemetry/2018-09-11/flight6/flight.tlog",
+    "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure": "telemetry/2018-09-11/flight9/flight.tlog",
+    "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure": "telemetry/2018-09-11/flight9/flight.tlog",
+    "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure": "telemetry/2018-09-11/flight10/flight.tlog",
+    "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure": "telemetry/2018-09-11/flight10/flight.tlog",
+    "carbonZ_2018-10-05-14-34-20_1_no_failure": "telemetry/2018-10-05/flight1/flight.tlog",
+    "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj": "telemetry/2018-10-05/flight1/flight.tlog",
+    "carbonZ_2018-10-05-14-37-22_1_no_failure": "telemetry/2018-10-05/flight2/flight.tlog",
+    "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure": "telemetry/2018-10-05/flight2/flight.tlog",
+    "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure": "telemetry/2018-10-05/flight2/flight.tlog",
+    "carbonZ_2018-10-05-15-52-12_1_no_failure": "telemetry/2018-10-05/flight4/flight.tlog",
+    "carbonZ_2018-10-05-15-52-12_2_no_failure": "telemetry/2018-10-05/flight4/flight.tlog",
+    "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj": "telemetry/2018-10-05/flight4/flight.tlog",
+    "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj": "telemetry/2018-10-05/flight3/flight.tlog",
+    "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj": "telemetry/2018-10-05/flight3/flight.tlog",
+    "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj": "telemetry/2018-10-18/flight12/flight.tlog",
+    "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj": "telemetry/2018-10-18/flight10/flight.tlog",
+    "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj": "telemetry/2018-10-18/flight9/flight.tlog",
+    "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj": "telemetry/2018-10-18/flight9/flight.tlog",
+    "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj": "telemetry/2018-10-18/flight11/flight.tlog",
+    "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj": "telemetry/2018-10-18/flight8/flight.tlog",
+    "carbonZ_2018-10-18-11-08-24_no_failure": "telemetry/2018-10-18/flight7/flight.tlog"
+  },
+  "held_out_fault": "rudder",
+  "historical_exposure": "retrospective; not an untouched test set",
+  "missing_legacy_files": [],
+  "moved_source_groups": [
+    {
+      "flight_id": "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj",
+      "from": "train",
+      "to": "val"
+    },
+    {
+      "flight_id": "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+      "from": "train",
+      "to": "val"
+    },
+    {
+      "flight_id": "carbonZ_2018-09-11-14-22-07_2_engine_failure",
+      "from": "train",
+      "to": "val"
+    },
+    {
+      "flight_id": "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+      "from": "train",
+      "to": "test"
+    },
+    {
+      "flight_id": "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure",
+      "from": "train",
+      "to": "test"
+    }
+  ],
+  "nominal_training_policy": "pre-first-injection finite contiguous windows only",
+  "parent_split_sha256": "4133fa2de079f6ae7fa1e8457aca1eb1fc5b044883100b6274b742694a16f901",
+  "protocol": "tvt-v2-verified-source-recording-repair",
+  "raw_metadata_sha256": "a8a964cc96a0cdc6cbe77691b8cbee4fabc135847737655e7e839b8e96e597b3",
+  "source_groups": {
+    "test": [
+      "telemetry/2018-09-11/flight6/flight.tlog",
+      "telemetry/2018-09-11/flight9/flight.tlog",
+      "telemetry/2018-10-18/flight7/flight.tlog"
+    ],
+    "train": [
+      "telemetry/2018-07-18/flight7/flight.tlog",
+      "telemetry/2018-07-30/flight1/flight.tlog",
+      "telemetry/2018-07-30/flight2/flight.tlog",
+      "telemetry/2018-07-30/flight4/flight.tlog",
+      "telemetry/2018-07-30/flight5/flight.tlog",
+      "telemetry/2018-07-30/flight7/flight.tlog",
+      "telemetry/2018-09-11/flight10/flight.tlog",
+      "telemetry/2018-09-11/flight3/flight.tlog",
+      "telemetry/2018-09-11/flight5/flight.tlog",
+      "telemetry/2018-09-11/flight7/flight.tlog",
+      "telemetry/2018-09-11/flight8/flight.tlog",
+      "telemetry/2018-10-05/flight1/flight.tlog",
+      "telemetry/2018-10-05/flight3/flight.tlog",
+      "telemetry/2018-10-05/flight4/flight.tlog",
+      "telemetry/2018-10-18/flight10/flight.tlog",
+      "telemetry/2018-10-18/flight11/flight.tlog",
+      "telemetry/2018-10-18/flight12/flight.tlog",
+      "telemetry/2018-10-18/flight8/flight.tlog",
+      "telemetry/2018-10-18/flight9/flight.tlog"
+    ],
+    "val": [
+      "telemetry/2018-07-18/flight8/flight.tlog",
+      "telemetry/2018-09-11/flight4/flight.tlog"
+    ]
+  },
+  "source_recording_audit_sha256": "8cc9e63eef83c42e25908fe75d02eb5a1cefa6b852ab2794708466a76171b068",
+  "test": [
+    "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure",
+    "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure",
+    "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure",
+    "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+    "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure",
+    "carbonZ_2018-10-18-11-08-24_no_failure"
+  ],
+  "train": [
+    "carbonZ_2018-07-18-15-53-31_1_engine_failure",
+    "carbonZ_2018-07-18-15-53-31_2_engine_failure",
+    "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj",
+    "carbonZ_2018-07-30-16-39-00_1_engine_failure",
+    "carbonZ_2018-07-30-16-39-00_2_engine_failure",
+    "carbonZ_2018-07-30-16-39-00_3_no_failure",
+    "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj",
+    "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj",
+    "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj",
+    "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj",
+    "carbonZ_2018-09-11-11-56-30_engine_failure",
+    "carbonZ_2018-09-11-14-41-38_no_failure",
+    "carbonZ_2018-09-11-14-41-51_elevator_failure",
+    "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+    "carbonZ_2018-09-11-15-05-11_1_elevator_failure",
+    "carbonZ_2018-09-11-15-05-11_2_no_failure",
+    "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure",
+    "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure",
+    "carbonZ_2018-10-05-14-34-20_1_no_failure",
+    "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj",
+    "carbonZ_2018-10-05-15-52-12_1_no_failure",
+    "carbonZ_2018-10-05-15-52-12_2_no_failure",
+    "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj",
+    "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj"
+  ],
+  "val": [
+    "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj",
+    "carbonZ_2018-07-18-16-37-39_1_no_failure",
+    "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj",
+    "carbonZ_2018-09-11-14-16-55_no_failure",
+    "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+    "carbonZ_2018-09-11-14-22-07_2_engine_failure"
+  ]
+}

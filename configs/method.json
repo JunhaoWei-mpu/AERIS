@@ -1,0 +1,141 @@
+{
+  "semantics": {
+    "alfa": {
+      "platform": "alfa",
+      "intent": [
+        0,
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12
+      ],
+      "actuation": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "response": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "angles": [
+        18,
+        19,
+        20
+      ],
+      "angle_period": 360.0,
+      "sample_rate": 50.0
+    },
+    "rflymad": {
+      "platform": "rflymad",
+      "intent": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "actuation": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "response": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "angles": [
+        12,
+        13,
+        14
+      ],
+      "angle_period": 6.283185307179586,
+      "sample_rate": 20.0
+    }
+  },
+  "windows": {
+    "samples": 100,
+    "train_stride": 5,
+    "library_stride": 100,
+    "evaluation_stride": 1,
+    "response_increment_seconds": 0.4,
+    "AY_response": "h-sample mean of h-step circular/linear increments; h is the existing 0.4-second horizon"
+  },
+  "reference": {
+    "k": 64,
+    "epsilon": 1e-08,
+    "source_exclusion": true,
+    "source_time_deduplication": true,
+    "context": "driver mean/population std/last through penultimate sample plus initial circular response state",
+    "distance": "squared Euclidean on library-standardized context",
+    "location": "aggregate_j[(V_query+(M_query-median M_neighbor)^2)/max(median V_neighbor+(1.4826 MAD M_neighbor)^2,1e-8)]",
+    "dispersion": "aggregate_j abs(log((V_query+1e-8)/(median V_neighbor+1e-8))-nominal_center_j)",
+    "channel_aggregate": {
+      "CA": "mean",
+      "AY": "median"
+    }
+  },
+  "calibration": {
+    "roles": [
+      "checkpoint_selection",
+      "dispersion_centering",
+      "primitive_tail",
+      "edge_max",
+      "final_max"
+    ],
+    "quartile_purge_seconds": 2,
+    "final_role_gap_seconds": 1,
+    "splice_quantile": 0.95,
+    "min_strict_positive_excesses": 20,
+    "excess_scale": "mean positive excess",
+    "body_survival": "(1+n-count(reference<x))/(n+1)",
+    "body_evidence": "-log(survival+1e-12)",
+    "tail": "anchored exponential excess; no clipping/family fallback"
+  },
+  "integration": {
+    "edge": "calibrate(max(calibrate(L),calibrate(D)))",
+    "final": "calibrate(max(calibrate(Base),CA,AY))",
+    "no_qualification": true,
+    "no_residualization": true,
+    "no_admission": true,
+    "no_learned_final_fusion": true
+  },
+  "ablations": {
+    "history_only": "same k=64, initial state context without drivers",
+    "pooled": "all eligible other-source library windows",
+    "without_dispersion": "Base plus calibrated location evidence only",
+    "without_ay": "Base plus CA edge only; independently final-calibrated"
+  },
+  "version": "aeris-horizon35-v1",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "base_training": "configs/base.json",
+  "benchmark_common_samples": 199,
+  "metric": {
+    "max_buffer": 100,
+    "thresholds": 250
+  }
+}

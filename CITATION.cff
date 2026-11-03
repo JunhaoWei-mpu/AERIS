@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this implementation, please cite the AERIS software and the companion manuscript when its publication identifier is available."
+title: "AERIS: Control-Context-Aware Fault Monitoring from UAV Flight Telemetry"
+type: software
+version: 1.0.0
+date-released: 2026-11-02
+url: "https://github.com/JunhaoWei-mpu/AERIS"
+repository-code: "https://github.com/JunhaoWei-mpu/AERIS"
+license: MIT
+authors:
+  - family-names: Wei
+    given-names: Junhao
+  - family-names: Li
+    given-names: Haochen
+  - family-names: Zhao
+    given-names: Yifu
+  - family-names: Li
+    given-names: Yanxiao
+  - family-names: Ye
+    given-names: Xudong
+  - family-names: Yao
+    given-names: Dexing
+  - family-names: Lai
+    given-names: Jiangyu
+  - family-names: Chen
+    given-names: Bidong
+  - family-names: Lu
+    given-names: Baili
+  - family-names: Cheong
+    given-names: Ngai
+  - family-names: Im
+    given-names: Sio-Kei
+  - family-names: Yang
+    given-names: Xu
+  - family-names: Lu
+    given-names: Yuhuan
+  - family-names: Wang
+    given-names: Yapeng

@@ -1,0 +1,50 @@
+{
+  "source": "Current frozen AERIS implementation; original module paths retained for checkpoint compatibility",
+  "unchanged_core_modules": {
+    "src/utils/scoring.py": "180cf9425840f31826b8e2d76772df816e1d5c996caee3458f120efffe60895f",
+    "src/models/modules/spectral.py": "971c91c72ca7f4485bfa17345c7cd154ba16e1426c4fdde3ebb9885960c44693",
+    "src/models/pg_cgad.py": "50ca8366ff939297a94e927a0412ee87d558001e263f5ee1328ea3107a3207cf",
+    "src/models/tvt_control_chain.py": "93f8aadfa1319e9c28027d43c3ab69e5db0a71a2a3ef044ecc2bba12477b0b46",
+    "src/models/modules/causal_attn.py": "c61f1ad524525e92dcd3b9f9cf93001f1c4b31d1c14bef7e813aca9a8cdd3568",
+    "src/data/flight_windows.py": "7730c6138dc7e74ffc88d5d1e536aa72629c852bc72293fd90d8b75f77ca2022",
+    "src/losses/composite.py": "e2e1ea1be6090a2800ad22c75f2ed06057678848063c90c82d8c96d67b43bb72",
+    "src/data/tvt_fixed_stress.py": "3ee9553036374f41ec0d0ead69fd77d331519b9f99d7107b5c04f0097107569c",
+    "src/losses/dag_loss.py": "a45b2e634ac8a8c251dcd7b69a4f90593db97953eb33855d9b24a7ae4f3e6c59",
+    "src/models/aeris_horizon_frozen.py": "9798f4411a60aa34b4a0f8cec94931d100450614447cb82ef793257154ec1465",
+    "src/data/tvt_dataset.py": "e0ae3866c46a0ca5c30fd36c9fc8f70a6d529daaf93bcabba33818c0c0d158f4",
+    "src/train/trainer.py": "009580e8e31f43b0236963463bf5d31007ac10b9e8bd211e8461a44440d3fd27",
+    "src/models/tvt_matched_chain.py": "376eca4cb404d684e18f3f8059d5d8654fb194604db4a82cb31f9e9d4fa90346",
+    "src/data/alfa.py": "c85c17c998d7552ee214e0aedf8257767281b128a2e04a91d9d315cd6567a5f9",
+    "src/models/tvt_online.py": "56d6f28928426d2bd88e4a9f6624416e98539a2c9b84686a5340ff93d2757a77",
+    "src/models/tvt_response_median.py": "177307414ad77d7b70b179c26c3f2ee5b22251d5b9e5404fec8352279326134f",
+    "src/models/tvt_exponential_tail.py": "2482288975bc8c57af869c84d518d0a1d53f46809cf3b1de92fbc9aa711692cb",
+    "src/models/tvt_horizon_response.py": "051e0b97c58942ff352f4c32f7cc52e75a0e597fdebe78a7c8fff7658eb62c39",
+    "src/data/tvt_raw.py": "2ffe312f9f544f0e701617070511a20ff974bddc9e9b9caf1f079169e9e93f5c",
+    "src/models/tvt_stable_window_inference.py": "e3b28b0abf7f866648eaf0a45645647721860447af9be34f9ab51017eb058c2e",
+    "src/utils/logging_utils.py": "39e2d2419e03d2926a302c5340c06d821c01328843b0e6e9593bbafbb2e52090",
+    "src/models/halo.py": "58d7ff7f05144ae75c8bae8fb99ee8718fc1fa44f3d1a9cab1bf7de0388b4934",
+    "src/eval/vus_metrics.py": "14c86214ecd7121a8427b4ce5141f3fba2f299d51bbdf17d1eb53b631f16e4e3",
+    "src/utils/seed.py": "af8e1a2960e7d292934adbabf389f3a3dab5ab9ba0e1e56b0c523d44f5838bd2",
+    "src/models/tvt_horizon_monitor.py": "9cb635c2be3de58d6ed571cbf1f98ac12fca02783c5355de37b229ce2a04a803"
+  },
+  "omits": [
+    "raw data",
+    "trained checkpoints",
+    "score outputs",
+    "experiment logs",
+    "raw result CSVs",
+    "paper plotting scripts"
+  ],
+  "flowchart_source_sha256": "65224adb2de4f7365ee26b1a0a3f59da32cffa119b225457a54001413dffca0e",
+  "portable_workflow_files": {
+    "aeris/__init__.py": "db5706f446c79e9f9631e2a7325ca702993c5f8e107f2c2037ce854b92a82c3e",
+    "aeris/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "aeris/cli.py": "9a0b2c8b82bc358f6c7305bd590fb09fd85dfd1434213be24c10552774d5041e",
+    "aeris/data.py": "a9a65d1ba5f1f4347d00837d6871abdec378379623dca91ff4c71b079bdbebff",
+    "aeris/pipeline.py": "027a1188c27f4dfbe108bcdab101d3aab90cdd4bcea795d3527117f86f64e1d9",
+    "aeris/protocol.py": "19e5ce92efbafbe8c1de999334e7e757c7d3a7dc817173f175a569f13fee60f3",
+    "aeris/training.py": "ec82f44b41055406b5bcb76687af9d46021c23b6ce35281e8bc64318c0100fe8"
+  },
+  "method_config_sha256": "07ed2b4517501e991b005887fa8849047ed7b91d9c223ec10190462c4a87cb0a",
+  "base_config_sha256": "26c4036949bf18a25a74809eb695a7273a2dce19e2a281e6d6a28c751ab35040"
+}

@@ -1,0 +1,111 @@
+{
+  "model": {
+    "kind": "halo",
+    "d_model": 128,
+    "n_heads": 4,
+    "n_encoder_blocks": 2,
+    "n_decoder_blocks": 2,
+    "dropout": 0.1,
+    "layer_dropout": 0.1,
+    "actuator_aug_rate": 0.3,
+    "actuator_aug_max_channels": 3,
+    "layer_score_weights": null,
+    "use_multi_period": true,
+    "multi_period_topk": 3,
+    "multi_period_inner": 32,
+    "multi_period_kernels": [
+      3
+    ],
+    "multi_period_gate": false,
+    "multi_period_gate_init": 0.0,
+    "pred_horizon": 0,
+    "pred_score_weight": 0.0,
+    "use_tn_stem": true,
+    "tn_stem_kernels": [
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        15
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "tn_stem_inner": 16,
+    "tn_stem_gate": true,
+    "tn_stem_gate_init": 0.1,
+    "use_tn_branch": true,
+    "tn_branch_layers": 3,
+    "tn_branch_topk": 3,
+    "tn_branch_hidden": 32,
+    "tn_branch_gate": false,
+    "tn_branch_gate_hard_input": true,
+    "tn_branch_gate_hard_min_active": 0.05,
+    "use_lstm_forecast": true,
+    "lstm_forecast_horizon": 20,
+    "lstm_forecast_hidden": 64,
+    "lstm_forecast_layers": 2,
+    "lstm_loss_weight": 1.0,
+    "lstm_score_weight": 0.05
+  },
+  "loss": {
+    "rec_weight": 1.0,
+    "nll_weight": 0.0,
+    "freq_weight": 0.3,
+    "dag_weight": 0.0,
+    "dag_warmup_epochs": 0,
+    "outlier_inject_rate": 0.1,
+    "mask_rate": 0.15
+  },
+  "train": {
+    "epochs": 12,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "warmup_steps": 200,
+    "grad_clip": 1.0,
+    "precision": "fp16",
+    "log_every": 200,
+    "eval_every": 1,
+    "patience": 12,
+    "min_epochs": 12,
+    "optimizer": "adamw"
+  },
+  "data": {
+    "window": 100,
+    "batch_size": 64,
+    "eval_batch_size": 256,
+    "stride": 1
+  },
+  "eval": {
+    "score_aggregation": "last",
+    "monitor": "nominal_validation_loss"
+  },
+  "channel_aliases": [
+    "command/pilot_roll",
+    "command/pilot_pitch",
+    "command/pilot_throttle",
+    "command/pilot_yaw",
+    "servo/elevator",
+    "servo/throttle",
+    "servo/rudder",
+    "servo/right_flaperon",
+    "servo/left_flaperon",
+    "command/reference_roll",
+    "command/reference_pitch",
+    "command/reference_yaw",
+    "command/reference_airspeed",
+    "airspeed",
+    "pressure",
+    "imu/gyro_x",
+    "imu/gyro_y",
+    "imu/gyro_z",
+    "state/roll",
+    "state/pitch",
+    "state/yaw",
+    "state/alt"
+  ]
+}
